@@ -39,50 +39,59 @@ function createPDF() {
     //   var med3 = $("#meditation-3").val();
     //   var med4 = $("#meditation-4").val();
 
-      var firstPage = (`* 2019 WORKSHEET: SYNCHRONICITY *                                                             ${today}
+      var firstPage = (`* WORKSHEET: EMOTIONAL PLANNING FOR 2020 *                                                    ${today}
 
 --------------------------------------------------------------------------------------------------------
 
 
-+ ---------------- +
++ ------------ +
 |    ENERGY    |
-+ ---------------- +
++ ------------ +
 
-     / \
-    /   \
-   /  _  \
-  /  | |  \
- /    –    \
+     / \\
+    /   \\
+   /  _  \\
+  /  | |  \\
+ /    –    \\
  ===========
   |       |
   |       |
---------------\/-\/--
+--------------\\/-\\@/--
+--------\\@/---\\/---------------
+-----\\/------\\/---------\\--\\@/---------
 
 
-
-+ What animal will you be in 2020?
-
++ ------------ +
+|    ANIMAL    |
++ ------------ +
 
 ${animal}
 
 
-+ How do you most want to feel in 2020?
++ ----------------------- +
+|    FEELINGS FOR 2020    |
++ ----------------------- +
 
-
+...........................
 ${emotion1}
-${emotion2}
-${emotion3}
-${emotion4}
+   ...........................
+   ${emotion2}
+      ...........................
+      ${emotion3}
+         ...........................
+         ${emotion3}
 
 
-+ Take a moment to think about how you’ll achieve your desired feelings in 2020:
-
++ -------------------------------------- +
+|    HOW I CAN ACHIEVE THESE FEELINGS    |
++ -------------------------------------- +
 
 ${question1}
 
 
-+ Is there anything you can stop doing in 2020?
-
++ ------------------------------ +
+|    IN 2020 I SHOULD STOP...    |
++ ------------------------------ +
 
 ${question2}
 
@@ -93,28 +102,22 @@ ${question2}
 
 
 
-var secondPage = (`+ ------------------- +
-|    RELATIONSHIPS    |
-+ ------------------- +
-
-
-+ Is there anything you can start doing in 2020?
-
+var secondPage = (`+ ---------------------------------------------------------- +
+|    I WILL CREATE A CALM AND PRODUCTIVE SPACE FOR MYSELF    |
++ ---------------------------------------------------------- +
 
 ${question3}
 
 
-+ In 2020, how will you create a calm and productive space for yourself?
 
 
-${question4}
 
 
       
 --------------------------------------------------------------------------------------------------------
 
-2019 WORKSHEET: SYNCHRONICITY BY THE CREATIVE INDEPENDENT
-<INDP.CO/2019>`);
+WORKSHEET: EMOTIONAL PLANNING FOR 2020 BY THE CREATIVE INDEPENDENT
+<INDP.CO/2020>`);
 
 
 
@@ -152,25 +155,15 @@ var two = doc
 doc.setLineWidth(1)
 doc.setDrawColor(0)
 doc.setFillColor(color)
-doc.circle(1.5, .5, .1, 'F')
+doc.circle(.93, 2.8, .1, 'F')
 
 // doc.text can now add those lines easily; otherwise, it would have run text off the screen!
 doc.text(one, margin, margin + 2 * oneLineHeight);
 
 doc.addPage();
 
-doc.setFontSize(fontSize)
-doc.setFont("courier")
-doc.setFontStyle("normal")
-doc.text('The color of your vision.', 2.7, 3)
-
-doc.setFontSize(fontSize)
-doc.setFont("courier")
-doc.setFontStyle("normal")
-doc.text('The color of your reality in 2019.', 2.7, 4)
-
 doc.text(two, margin, margin + 2 * oneLineHeight);
 
-// doc.save('2019-worksheet-synchronicity.pdf');
+doc.save('2019-worksheet-synchronicity.pdf');
 
 }
