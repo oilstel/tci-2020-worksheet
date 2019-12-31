@@ -22,7 +22,7 @@ function createPDF() {
 
     //   var e = document.getElementById("sound");
       var color = document.getElementsByName('color')[0].value
-      var animal = document.getElementsByName('animal')[0].value
+      var animal = document.getElementsByName('animal')[0].value.toUpperCase()
       var emotion1 = document.getElementsByName('emotion-in-2020-1')[0].value
       var emotion2 = document.getElementsByName('emotion-in-2020-2')[0].value
       var emotion3 = document.getElementsByName('emotion-in-2020-3')[0].value
@@ -47,39 +47,39 @@ function createPDF() {
 + ------------ +
 |    ENERGY    |
 + ------------ +
-
-     / \\
-    /   \\
-   /  _  \\
-  /  | |  \\
- /    –    \\
- ===========
-  |       |
-  |       |
---------------\\/-\\@/--
---------\\@/---\\/---------------
------\\/------\\/---------\\--\\@/---------
+ 
+* * */ \\* * * * * * * * * * * * * * * * * 2  * * * * * * * * * * * *   * * * * * * 2  * * * * * * * * *
+* * /   \\* * * * * * * * * *  2  * * * * * * * * * 0   * * * * * * * * * * * *   2 * * * * * * *   * 
+* */  _  \\* * * * * 2 * * * * * * * *  0 * * * * * * *    2  * * *   * * *   0 * * * * * * * *  * 
+* /  | |  \\* * * * * *  * *  * * * *  *  ** * *  * * * * * * * *  * * * * * * *   * * *   * * * * *    
+*/    –    \\* * *    0  * * * *  * * * * 2 * * * * * * * *   * * * * * *   * * * * * 0  * * * * *   *   
+ ===========   *   *        *        *   * *       *           *     * *        *  *          *     *
+* |       |    *           *    *        *      *          *             *         *       * *    *
+  |       |  *         *            *                *          *              *         *         *
+----\\/----\\/--\\/-\\@/--   -- -    - -- - - -- ----  -- - - -------- - - -- - -- - -- -- - - - -- - ----
+-\\/---\\/----\\@/---\\/--  - - - -- - ----- -- -- -- -- - - -- ---- ----- ----- -- -- - -- -- - -- -- - --
+-----\\/------\\/---------\\--\\@/----  -- - -- - - -- ----- ---- - --- -- -- - - -- - - -- - -- - -- --
 
 
 + ------------ +
 |    ANIMAL    |
 + ------------ +
 
-${animal}
+* ${animal} *
 
 
 + ----------------------- +
 |    FEELINGS FOR 2020    |
 + ----------------------- +
 
-...........................
 ${emotion1}
-   ...........................
-   ${emotion2}
-      ...........................
-      ${emotion3}
-         ...........................
-         ${emotion3}
+...........................
+    ${emotion2}
+    ...........................
+        ${emotion3}
+        ...........................
+            ${emotion3}
+            ...........................
 
 
 + -------------------------------------- +
@@ -117,7 +117,7 @@ ${question3}
 --------------------------------------------------------------------------------------------------------
 
 WORKSHEET: EMOTIONAL PLANNING FOR 2020 BY THE CREATIVE INDEPENDENT
-<INDP.CO/2020>`);
+<INDP.CO/2020WKSHT>`);
 
 
 
@@ -164,6 +164,6 @@ doc.addPage();
 
 doc.text(two, margin, margin + 2 * oneLineHeight);
 
-doc.save('2019-worksheet-synchronicity.pdf');
+doc.save('worksheet-emotional-planning-for-2020.pdf');
 
 }

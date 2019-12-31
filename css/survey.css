@@ -66,6 +66,7 @@ input, textarea, select, option, #submit {
     -webkit-border-radius: 0px;
     font-size: 16px;
     padding: 11px;
+    border: 0;
 }
 input.jscolor.worksheet-field.jscolor, input.jscolor.worksheet-field.jscolor-active {
     color: transparent !important;
@@ -94,6 +95,10 @@ option {
 }
 #submit {
     border-radius: 50px;
+    /* background: #ffff00; */
+    border: 2px solid #000;
+    margin-bottom: 80px;
+    cursor: pointer;
 }
 .optional-button {
     border: 1px dotted #000;
